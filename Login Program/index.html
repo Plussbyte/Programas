@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">  <!-- ↓ text --> <!-- ↑ text -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,21 +11,34 @@
 
     <div class="loginStyle" id="loginLogic"><!-- Aquí va toda la parte del ingreso (LOGIN) -->
 
+
+        <!-- ↓ Estructura de los inputs ( Datos usuario ) -->
         <div>
             <p class="textLogin" >Numero de documento</p>
-            <input class="documentLogStyle"  id="documentLogLogic" type="text">
+            <input class="documentLognStyle"  id="documentLognLogic" type="text">
         </div>
 
         <div>
             <p class="textLogin" >Contraseña</p>
-            <input class="passwordLogStyle"  id="passwordLogLogic" type="text">
+            <input class="passwordLognStyle"  id="passwordLognLogic" type="password">
         </div>
+        <!-- ↑ Estructura de los inputs ( Datos usuario ) -->
 
+
+        <!-- ↓ Estructura para los errores del ingreso -->
+        <p class="errorNumberLognStyle" id="errorNumberLognLogic">Error solo se aceptan numeros en el documento</p>
+        <p class="errorPasswordLognStyle" id="errorPasswordLognLogic">Error contraseña incorrecta</p>
+        <!-- ↑ Estructura para los errores del ingreso -->
+
+
+        <!-- ↓ Estructura de los botones ingresar y registrarsen -->
         <div class="containerButtonsLogic" >
-            <input class="acceptLogStyle" id="acceptLogLogic" type="button" value="">
-            <input class="checkInLogStyle" id="checkInLogLogic" type="button" value="">
+            <input class="acceptLognStyle" id="acceptLognLogic" type="button" value="Ingresar">
+            <input class="checkInLognStyle" id="checkInLognLogic" type="button" value="Registrarse">
         </div>
+        <!-- ↑ Estructura de los botones ingresar y registrarsen -->
 
+        
     </div> 
 
     <div class="allStyle" id="allLogic" ><!-- Aquí va todo el contenido de la pagina -->
