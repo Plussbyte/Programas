@@ -1,0 +1,38 @@
+/* ↓ Estilos del ingreso (LOGIN) */
+.loginStyle{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 15em;
+    width: 20em;
+    background-color: bisque;
+    border: 1px rgb(19, 19, 19) solid;
+    border-radius: 10px;
+}
+
+    .textLogin{
+        margin-bottom: 0;
+    }
+
+    .containerButtonsLogic{
+        margin-top: 1em;
+    }
+
+        .acceptLogStyle{
+            margin: 5px;
+            height: 2em;
+            width: 5em;
+        }
+
+        .checkInLogStyle{
+            margin: 5px;
+            height: 2em;
+            width: 5em;
+        }
+
+
+/* ↑ Estilos del ingreso (LOGIN) */

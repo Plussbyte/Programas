@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/mainLogic.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Este programa es una prueba de un ingreso a alguna plataforma (LOGIN) -->
+
+    <div class="loginStyle" id="loginLogic"><!-- Aquí va toda la parte del ingreso (LOGIN) -->
+
+        <div>
+            <p class="textLogin" >Numero de documento</p>
+            <input class="documentLogStyle"  id="documentLogLogic" type="text">
+        </div>
+
+        <div>
+            <p class="textLogin" >Contraseña</p>
+            <input class="passwordLogStyle"  id="passwordLogLogic" type="text">
+        </div>
+
+        <div class="containerButtonsLogic" >
+            <input class="acceptLogStyle" id="acceptLogLogic" type="button" value="">
+            <input class="checkInLogStyle" id="checkInLogLogic" type="button" value="">
+        </div>
+
+    </div> 
+
+    <div class="allStyle" id="allLogic" ><!-- Aquí va todo el contenido de la pagina -->
+
+        <header></header>
+
+        <main></main>
+        
+        <footer></footer>
+
+    </div>
+
+    <script src="Logic/centerLogic.js" ></script> <!-- Logica de interacción -->
+    <script src="Logic/centerNode.mjs" ></script> <!-- Logica de node ( servidor ) -->
+</body>
+</html>
