@@ -27,6 +27,7 @@
 
         <!-- ↓ Estructura para los errores del ingreso -->
         <p class="errorNumberLognStyle" id="errorNumberLognLogic">Error solo se aceptan numeros en el documento</p>
+        <p class="errorFiveNumLognStyle" id="errorFiveNumLognLogic">Error el documento debe tener mas de 5 numeros</p>
         <p class="errorPasswordLognStyle" id="errorPasswordLognLogic">Error contraseña incorrecta</p>
         <!-- ↑ Estructura para los errores del ingreso -->
 
@@ -51,7 +52,7 @@
 
     </div>
 
-    <script src="Logic/centerLogic.js" ></script> <!-- Logica de interacción -->
-    <script src="Logic/centerNode.mjs" ></script> <!-- Logica de node ( servidor ) -->
+    <script type="module" src="Logic/centerLogic.mjs" ></script> <!-- Logica de interacción -->
+    <script type="module" src="Logic/centerNode.mjs" ></script> <!-- Logica de node ( servidor ) -->
 </body>
 </html>
