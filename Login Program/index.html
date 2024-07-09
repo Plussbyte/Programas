@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Styles/mainLogic.css">
+    <link rel="stylesheet" href="Styles/loginStyle.css">
+    <link rel="stylesheet" href="Styles/checkInStyle.css">
     <title>Document</title>
 </head>
 <body>
     <!-- Este programa es una prueba de un ingreso a alguna plataforma (LOGIN) -->
 
-    <div class="loginStyle" id="loginLogic"><!-- Aquí va toda la parte del ingreso (LOGIN) -->
-
+    <div class="loginInterfaceStyle" id="loginInterfaceLogic"><!-- Aquí va toda la parte del ingreso (LOGIN) -->
 
         <!-- ↓ Estructura de los inputs ( Datos usuario ) -->
         <div>
@@ -26,21 +26,54 @@
 
 
         <!-- ↓ Estructura para los errores del ingreso -->
-        <p class="errorNumberLognStyle" id="errorNumberLognLogic">Error solo se aceptan numeros en el documento</p>
-        <p class="errorFiveNumLognStyle" id="errorFiveNumLognLogic">Error el documento debe tener mas de 5 numeros</p>
+        <p class="errorNumberLognStyle" id="errorNumberLognLogic">Solo se aceptan numeros en el documento</p>
+        <p class="errorFiveNumLognStyle" id="errorFiveNumLognLogic">El documento debe tener mas de 5 numeros</p>
         <p class="errorPasswordLognStyle" id="errorPasswordLognLogic">Error contraseña incorrecta</p>
         <!-- ↑ Estructura para los errores del ingreso -->
 
 
         <!-- ↓ Estructura de los botones ingresar y registrarsen -->
-        <div class="containerButtonsLogic" >
+        <div class="containerButtonsStyle" id="containerButtonsLogic" >
             <input class="acceptLognStyle" id="acceptLognLogic" type="button" value="Ingresar">
             <input class="checkInLognStyle" id="checkInLognLogic" type="button" value="Registrarse">
         </div>
         <!-- ↑ Estructura de los botones ingresar y registrarsen -->
-
         
-    </div> 
+    </div>
+
+    <!-- ↓ Estructura interfaz para registrarse -->
+    <div class="checkInInterfaceStyle" id="checkInInterfaceLogic">
+        <!-- ↓ Estructura inputs (Datos clientes para registrarse) -->
+        <div class="containerDocumentCheckIn">
+            <p>Numero de documento</p>
+            <input type="text">
+        </div>
+
+        <div class="containerPasswordCheckIn">
+            <p>Contraseña nueva</p>
+            <input type="password">
+            <p>Ingrese la contraseña de nuevo</p>
+            <input type="text">
+        </div>
+        <!-- ↑ Estructura inputs (Datos clientes para registrarse) -->
+
+        <!-- ↓ Estructura errores del registro -->
+        <div class="containerErrorsCheckIn">
+            <p>Solo se aceptan numeros en el documento</p>
+            <p>El documento debe tener mas de 5 numeros</p>
+            <p>La contraseña debe tener minimo 5 caracteres </p>
+        </div>
+        <!-- ↑ Estructura errores del registro -->
+
+        <!-- ↓ Estructura botones validar y cancelar -->
+        <div class="containerButtonsCheckIn">
+         <input class="acceptCheckinStyle" id="acceptCheckinLogic" type="button" value="Validar">
+         <input class="cancelCheckinStyle" id="cancelCheckinLogic"type="button" value="Cancelar">
+        </div>
+        <!-- ↑ Estructura botones validar y cancelar -->
+
+    </div>
+    <!-- ↑ Estructura interfaz para registrarse -->
 
     <div class="allStyle" id="allLogic" ><!-- Aquí va todo el contenido de la pagina -->
 

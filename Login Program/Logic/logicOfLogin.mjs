@@ -1,12 +1,14 @@
-const buttonAccept = document.getElementById('acceptLognLogic')
-const inputDocument = document.getElementById('documentLognLogic')
 const allLogin = document.getElementById('loginLogic')
 
 const errorTextLetters = document.getElementById('errorNumberLognLogic')
 const errorFiveNum = document.getElementById('errorFiveNumLognLogic')
 const errorTextPassword = document.getElementById('errorPasswordLognLogic')
 
-export function notLetters(){ // <- <- Funcion la cual hace que el input del documento solo reciba números
+const containerButtons = document.getElementById('containerButtonsLogic')
+const buttonAccept = document.getElementById('acceptLognLogic')
+const inputDocument = document.getElementById('documentLognLogic')
+
+export function enterLogin(){ // <- <- Funcion la cual hace que el input del documento solo reciba números
 
     /* ↓ Manejo del evento click del boton ingresar del login */
     buttonAccept.addEventListener('click',()=>{
@@ -28,14 +30,17 @@ export function notLetters(){ // <- <- Funcion la cual hace que el input del doc
             if(stringInpDoc.length < 6){
                 errorFiveNum.style.display = 'flex'
                 errorTextLetters.style.display = 'none'
+                containerButtons.style.margin = '0'
 
             } else if(errorIndicatorLetters < stringInpDoc.length) {
                 errorTextLetters.style.display = 'flex'
                 errorFiveNum.style.display = 'none'
+                containerButtons.style.margin = '0'
 
             } else {
                 errorTextLetters.style.display = 'none'
                 errorFiveNum.style.display = 'none'
+                containerButtons.style.margin = '1em'
                 enterIterador = 1
             }
         }
@@ -43,7 +48,7 @@ export function notLetters(){ // <- <- Funcion la cual hace que el input del doc
 
         function enterLogin(){
             if(enterIterador === 1){
-                allLogin.style.display = 'none'
+                console.log('Documento exitoso')
             }
         }
 

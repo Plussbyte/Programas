@@ -1,0 +1,39 @@
+/* ↓ Estilos de la interfaz de registro (Registrarse) */
+.checkInInterfaceStyle{
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 15em;
+    width: 20em;
+    background-color: bisque;
+    border: 1px rgb(19, 19, 19) solid;
+    border-radius: 10px;
+}
+
+    /* ↓ Estilos de los inputs (Datos de usuario para registrarse) */
+        .containerDocumentCheckIn p{
+            word-wrap: break-word;
+            margin-bottom: 0;
+        }
+        .containerPasswordCheckIn p{
+            word-wrap: break-word;
+            font-size: .9em;
+            margin-bottom: 0;
+        }
+
+    /* ↑ Estilos de los inputs (Datos de usuario para registrarse) */
+
+
+    /* ↓ Estilos botones Registro de usuarios */
+
+        .containerButtonsCheckIn{
+            margin-top: 1em;
+        }
+
+    /* ↑ Estilos botones Registro de usuarios */
+
+/* ↑ Estilos de la interfaz de registro (Registrarse) */

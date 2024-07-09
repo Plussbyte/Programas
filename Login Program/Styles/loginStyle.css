@@ -3,7 +3,7 @@ body{
 }
 
 /* ↓ Estilos del ingreso (LOGIN) */
-.loginStyle{
+.loginInterfaceStyle{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -24,13 +24,6 @@ body{
     /* ↑ Estilos de los inputs ( Datos usuario ) */
 
 
-    /* ↓ Estilos de los botones ingresar y registrarsen */
-    .containerButtonsLogic{
-        margin-top: 1em;
-    }
-    /* ↑ Estilos de los botones ingresar y registrarsen */
-
-
     /* ↓ Estructura para los errores del ingreso  */
        .errorNumberLognStyle{
         display:none;
@@ -47,16 +40,19 @@ body{
 
 
     /* ↓ Estilos de los botones ingresar y registrarsen  */
-    .acceptLognStyle{
-        margin: 5px;
-        height: 2em;
-        width: 5em;
+    .containerButtonsStyle{
+        margin-top: 1em;
     }
-    .checkInLognStyle{
-        margin: 5px;
-        height: 2em;
-        width: 6.5em;
-    }
+        .acceptLognStyle{
+            margin: 5px;
+            height: 2em;
+            width: 5em;
+        }
+        .checkInLognStyle{
+            margin: 5px;
+            height: 2em;
+            width: 6.5em;
+        }
     /* ↑ Estilos de los botones ingresar y registrarsen  */
 
 

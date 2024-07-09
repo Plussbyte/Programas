@@ -1,3 +1,5 @@
-import { notLetters } from './logicOfLogin.mjs'
+import { enterLogin } from './logicOfLogin.mjs'
+import { enterCheckIn } from './logicOfCheckIn.mjs'
 
-notLetters()
+enterLogin()
+enterCheckIn()
