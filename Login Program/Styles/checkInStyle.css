@@ -28,6 +28,25 @@
     /* ↑ Estilos de los inputs (Datos de usuario para registrarse) */
 
 
+    /* ↓ Estilos errores registrare */
+        .numbersErrorCheckInStyle{
+            display: none;
+            margin: 10px 0 0 0;
+        }
+
+        .charactersErrorCheckInStyle{
+            display: none;
+            margin: 10px 0 0 0;
+        }
+
+        .passwordErrorCheckInStyle{
+            display: none;
+            margin: 10px 0 0 0;
+        }
+
+    /* ↑ Estilos errores registrare */
+
+
     /* ↓ Estilos botones Registro de usuarios */
 
         .containerButtonsCheckIn{

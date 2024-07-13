@@ -1,12 +1,14 @@
 const allLogin = document.getElementById('loginLogic')
 
+const inputDocument = document.getElementById('documentLognLogic')
+
 const errorTextLetters = document.getElementById('errorNumberLognLogic')
 const errorFiveNum = document.getElementById('errorFiveNumLognLogic')
 const errorTextPassword = document.getElementById('errorPasswordLognLogic')
 
 const containerButtons = document.getElementById('containerButtonsLogic')
 const buttonAccept = document.getElementById('acceptLognLogic')
-const inputDocument = document.getElementById('documentLognLogic')
+
 
 export function enterLogin(){ // <- <- Funcion la cual hace que el input del documento solo reciba números
 
