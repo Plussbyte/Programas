@@ -39,7 +39,17 @@
             margin: 10px 0 0 0;
         }
 
+        .ErrorNewPasswordCheckInStyle{
+            display: none;
+            margin: 10px 0 0 0;
+        }
+
         .passwordErrorCheckInStyle{
+            display: none;
+            margin: 10px 0 0 0;
+        }
+
+        .repeatPasswordCheckInStyle{
             display: none;
             margin: 10px 0 0 0;
         }
