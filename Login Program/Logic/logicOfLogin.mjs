@@ -2,6 +2,7 @@ const allLogin = document.getElementById('loginLogic')
 
 const inputDocument = document.getElementById('documentLognLogic')
 
+const errorEmptySpaces = document.getElementById('errorEmptySpacesLogic')
 const errorTextLetters = document.getElementById('errorNumberLognLogic')
 const errorFiveNum = document.getElementById('errorFiveNumLognLogic')
 const errorTextPassword = document.getElementById('errorPasswordLognLogic')
@@ -29,19 +30,27 @@ export function enterLogin(){ // <- <- Funcion la cual hace que el input del doc
             }
             console.log(stringInpDoc.length)
 
-            if(stringInpDoc.length < 6){
+            if(inputDocument.value === ''){
+                errorEmptySpaces.style.display = 'flex'
+                errorTextLetters.style.display = 'none'
+                errorFiveNum.style.display = 'none'
+
+            }else if(stringInpDoc.length < 6){
                 errorFiveNum.style.display = 'flex'
                 errorTextLetters.style.display = 'none'
+                errorEmptySpaces.style.display = 'none'
                 containerButtons.style.margin = '0'
 
             } else if(errorIndicatorLetters < stringInpDoc.length) {
                 errorTextLetters.style.display = 'flex'
                 errorFiveNum.style.display = 'none'
+                errorEmptySpaces.style.display = 'none'
                 containerButtons.style.margin = '0'
 
             } else {
                 errorTextLetters.style.display = 'none'
                 errorFiveNum.style.display = 'none'
+                errorEmptySpaces.style.display = 'none'
                 containerButtons.style.margin = '1em'
                 enterIterador = 1
             }

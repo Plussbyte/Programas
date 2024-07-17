@@ -25,17 +25,24 @@ body{
 
 
     /* ↓ Estructura para los errores del ingreso  */
-       .errorNumberLognStyle{
-        display:none;
-       }
+        .errorEmptySpacesStyle{
+            display:none;
+            width: 15em;
+            text-align: center;
+            margin-bottom: 0;
+        }
 
-       .errorFiveNumLognStyle{
-        display:none;
-       }
+        .errorNumberLognStyle{
+            display:none;
+        }
 
-       .errorPasswordLognStyle{
-        display:none;
-       }
+        .errorFiveNumLognStyle{
+            display:none;
+        }
+        
+        .errorPasswordLognStyle{
+            display:none;
+        }
     /* ↑ Estructura para los errores del ingreso  */
 
 

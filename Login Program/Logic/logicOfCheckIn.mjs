@@ -1,4 +1,5 @@
 import { noLetters } from './utils.mjs'
+import { oneNumberAndOneLetter } from './utils.mjs'
 
 const interfaceCheckIn = document.getElementById('checkInInterfaceLogic')
 const interfaceLogin = document.getElementById('loginInterfaceLogic')
@@ -8,12 +9,13 @@ const interfaceLogin = document.getElementById('loginInterfaceLogic')
 const inputDocument = document.getElementById('documentLognLogic')
 // ↓ Inputs del registro
 const documentCheckIn = document.getElementById('documentCheckInLogic')
-const newPasswordCheckIn =document.getElementById('newPasswordCheckInLogic')
+const newPasswordCheckIn = document.getElementById('newPasswordCheckInLogic')
 
 
 // ↓ Errores del login
 const errorTextLetters = document.getElementById('errorNumberLognLogic')
 const errorFiveNum = document.getElementById('errorFiveNumLognLogic')
+const errorEmptySpaces = document.getElementById('errorEmptySpacesLogic')
 // ↓ Errores del registro
 const errorNumbersDocument = document.getElementById('numbersErrorCheckInLogic')
 const errorCharactersDocument = document.getElementById('charactersErrorCheckInLogic')
@@ -34,6 +36,7 @@ export function enterCheckIn(){
         interfaceCheckIn.style.display = 'flex'
         errorTextLetters.style.display = 'none'
         errorFiveNum.style.display = 'none'
+        errorEmptySpaces.style.display = 'none'
         inputDocument.value = ''
     })
 
@@ -51,10 +54,14 @@ export function enterCheckIn(){
         if(documentCheckIn.value.length < 6){
             errorCharactersDocument.style.display = 'flex'
             errorNumbersDocument.style.display = 'none'
+            errorCharactersPassword.style.display = 'none'
+            errorNewPassword.style.display = 'none'
 
         } else if(iteratorNoLettersCheckIn !== documentCheckIn.value.length){
             errorNumbersDocument.style.display = 'flex'
             errorCharactersDocument.style.display = 'none'
+            errorCharactersPassword.style.display = 'none'
+            errorNewPassword.style.display = 'none'
             
         } else{
             errorCharactersDocument.style.display = 'none'
@@ -66,17 +73,27 @@ export function enterCheckIn(){
 
 
         /* ↓ Manejo de errores de los inputs de contraseñas */
-        console.log(newPasswordCheckIn.value)
+        let iteradorTwoCharactersErrors = oneNumberAndOneLetter(newPasswordCheckIn)
+
+        console.log(iteradorTwoCharactersErrors)
+
         if(iteradorPasswordErrors === 1){
 
-            if(newPasswordCheckIn.value = ''){
+            if(newPasswordCheckIn.value === ''){
                 errorNewPassword.style.display = 'flex'
                 errorCharactersPassword.style.display = 'none'
+
             }else if(newPasswordCheckIn.value.length < 5){
                 errorCharactersPassword.style.display = 'flex'
                 errorNewPassword.style.display = 'none'
+
+            //}else if(){
+
+            }else{
+            errorNewPassword.style.display = 'none'
+            errorCharactersPassword.style.display = 'none'
             }
-        } else{}
+        }
         /* ↑ Manejo de errores de los inputs de contraseñas */
     })  
 
@@ -87,9 +104,16 @@ export function enterCheckIn(){
     cancelButtonCheckIn.addEventListener('click',()=>{
         interfaceLogin.style.display = 'flex'
         interfaceCheckIn.style.display = 'none'
+
         errorCharactersDocument.style.display = 'none'
         errorNumbersDocument.style.display = 'none'
+        errorCharactersPassword.style.display = 'none'
+        errorNewPassword.style.display = 'none'
+
         documentCheckIn.value = ''
+        newPasswordCheckIn.value = ''
+
+        iteradorPasswordErrors = 0
     })
 
     /* ↑ Manejo del evento click del boton Cancelar de registrarse */
