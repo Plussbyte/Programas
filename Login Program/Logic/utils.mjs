@@ -16,27 +16,19 @@ export function noLetters(variable, iterator){
 export function oneNumberAndOneLetter(variable){
     let string = variable.value.toString()
     let array = string.split('')
-    let letter = 0; let number = 0
+    let IteratorLetter = 0; let letter = 0; let number = 0
 
     for(let i = 0;i < string.length;i++){
         for(let a = 0;a < 10;a++){
             if(array[i] == a){
                 number = 1
+                IteratorLetter += 1
             }
         }
     }
-
-    for(let i = 0;i < string.length;i++){
-        for(let a = 0;a < 10;a++){
-            if(array[i] == a){
-                letter -= 1
-            }else{
-                letter += 1
-            }
-        }
+    if(IteratorLetter !== string.length){
+        letter = 1
     }
-
-    console.log(letter, number,variable.value)
 
     if(letter === 1 && number === 1){
         return true

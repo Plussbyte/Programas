@@ -54,17 +54,23 @@
             <p>Contraseña nueva</p>
             <input class="newPasswordCheckInSyle" id="newPasswordCheckInLogic" type="password">
             <p>Ingrese la contraseña de nuevo</p>
-            <input type="text">
+            <input class="repeatPasswordCheckInStyle" id="repeatPasswordCheckInLogic" type="password">
         </div>
         <!-- ↑ Estructura inputs (Datos clientes para registrarse) -->
 
         <!-- ↓ Estructura errores del registro -->
         <div class="containerErrorsCheckIn">
-            <p class="numbersErrorCheckInStyle" id="numbersErrorCheckInLogic" >Solo se aceptan numeros en el documento</p>
-            <p class="charactersErrorCheckInStyle" id="charactersErrorCheckInLogic" >El documento debe tener mas de 5 numeros</p>
-            <p class="ErrorNewPasswordCheckInStyle" id="ErrorNewPasswordCheckInLogic" >Escriba una contraseña nueva</p>
-            <p class="passwordErrorCheckInStyle" id="passwordErrorCheckInLogic" >La contraseña debe tener minimo 5 caracteres </p>            
-            <p class="repeatPasswordCheckInStyle" id="repeatPasswordCheckInLogic" >Las contraseñas no coinciden ingreselas nuevamente</p>
+            <!-- ↓ Documento -->
+                <p class="numbersErrorCheckInStyle" id="numbersErrorCheckInLogic" >Solo se aceptan numeros en el documento</p>
+                <p class="charactersErrorCheckInStyle" id="charactersErrorCheckInLogic" >El documento debe tener mas de 5 numeros</p>
+            <!-- ↑ Documento -->
+                
+            <!-- ↓ Contraseña -->
+                <p class="ErrorNewPasswordCheckInStyle" id="ErrorNewPasswordCheckInLogic" >Escriba una contraseña nueva</p>
+                <p class="passwordErrorCheckInStyle" id="passwordErrorCheckInLogic" >La contraseña debe tener minimo 5 caracteres </p> 
+                <p class="oneLetterAndNumberErrorCheckInStyle" id="oneLetterAndNumberErrorCheckInLogic" >La contraseña debe contener minimo una letra y un numero</p>           
+                <p class="repeatPasswordErrorCheckInStyle" id="repeatPasswordErrorCheckInLogic" >Las contraseñas no coinciden ingreselas nuevamente</p>
+            <!-- ↑ Documento -->
         </div>
         <!-- ↑ Estructura errores del registro -->
 

@@ -10,6 +10,7 @@ const inputDocument = document.getElementById('documentLognLogic')
 // ↓ Inputs del registro
 const documentCheckIn = document.getElementById('documentCheckInLogic')
 const newPasswordCheckIn = document.getElementById('newPasswordCheckInLogic')
+const repeatPasswordCheckIn = document.getElementById('repeatPasswordCheckInLogic')
 
 
 // ↓ Errores del login
@@ -21,6 +22,8 @@ const errorNumbersDocument = document.getElementById('numbersErrorCheckInLogic')
 const errorCharactersDocument = document.getElementById('charactersErrorCheckInLogic')
 const errorCharactersPassword = document.getElementById('passwordErrorCheckInLogic')
 const errorNewPassword = document.getElementById('ErrorNewPasswordCheckInLogic')
+const errorOneLetterAndNumber = document.getElementById('oneLetterAndNumberErrorCheckInLogic')
+const errorPasswordRepeat = document.getElementById('repeatPasswordErrorCheckInLogic')
 
 
 const buttonCheckIn = document.getElementById('checkInLognLogic')
@@ -75,26 +78,44 @@ export function enterCheckIn(){
         /* ↓ Manejo de errores de los inputs de contraseñas */
         let iteradorTwoCharactersErrors = oneNumberAndOneLetter(newPasswordCheckIn)
 
-        console.log(iteradorTwoCharactersErrors)
+        console.log(iteradorTwoCharactersErrors,newPasswordCheckIn.value.length)
 
         if(iteradorPasswordErrors === 1){
 
             if(newPasswordCheckIn.value === ''){
                 errorNewPassword.style.display = 'flex'
                 errorCharactersPassword.style.display = 'none'
+                errorOneLetterAndNumber.style.display = 'none'
+                errorPasswordRepeat.style.display = 'none'
 
             }else if(newPasswordCheckIn.value.length < 5){
                 errorCharactersPassword.style.display = 'flex'
                 errorNewPassword.style.display = 'none'
+                errorOneLetterAndNumber.style.display = 'none'
+                errorPasswordRepeat.style.display = 'none'
 
-            //}else if(){
+            }else if(iteradorTwoCharactersErrors === false){
+                errorOneLetterAndNumber.style.display = 'flex'
+                errorNewPassword.style.display = 'none'
+                errorCharactersPassword.style.display = 'none'
+                errorPasswordRepeat.style.display = 'none'
+
+            }else if(newPasswordCheckIn.value !== repeatPasswordCheckIn.value){
+                errorPasswordRepeat.style.display = 'flex'
+                errorNewPassword.style.display = 'none'
+                errorCharactersPassword.style.display = 'none'
+                errorOneLetterAndNumber.style.display = 'none'
 
             }else{
-            errorNewPassword.style.display = 'none'
-            errorCharactersPassword.style.display = 'none'
+                errorNewPassword.style.display = 'none'
+                errorCharactersPassword.style.display = 'none'
+                errorOneLetterAndNumber.style.display = 'none'
+                errorPasswordRepeat.style.display = 'none'
+                console.log('Registro exitoso')
             }
         }
         /* ↑ Manejo de errores de los inputs de contraseñas */
+
     })  
 
     /* ↑ Manejo del evento click del boton validar de registrarse */
@@ -112,6 +133,7 @@ export function enterCheckIn(){
 
         documentCheckIn.value = ''
         newPasswordCheckIn.value = ''
+        repeatPasswordCheckIn.value = ''
 
         iteradorPasswordErrors = 0
     })

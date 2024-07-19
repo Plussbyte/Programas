@@ -49,9 +49,16 @@
             margin: 10px 0 0 0;
         }
 
-        .repeatPasswordCheckInStyle{
+        .oneLetterAndNumberErrorCheckInStyle{
             display: none;
-            margin: 10px 0 0 0;
+            text-align: center;
+            margin: 2px 0 0 0;
+        }
+
+        .repeatPasswordErrorCheckInStyle{
+            display: none;
+            text-align: center;
+            margin: 2px 0 0 0;
         }
 
     /* ↑ Estilos errores registrare */
