@@ -22,11 +22,17 @@ export function oneNumberAndOneLetter(variable){
         for(let a = 0;a < 10;a++){
             if(array[i] == a){
                 number = 1
-
-            }else if(array[i] !== a){
-                letter = 1
             }
-            
+        }
+    }
+
+    for(let i = 0;i < string.length;i++){
+        for(let a = 0;a < 10;a++){
+            if(array[i] == a){
+                letter -= 1
+            }else{
+                letter += 1
+            }
         }
     }
 
