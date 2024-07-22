@@ -1,0 +1,24 @@
+.containerChargingScreenStyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 5em;
+    width: 10em;
+    background-color: aliceblue;
+    border: 3px black solid;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+
+.chargingPointStyle{
+    height: 6px;
+    width: 6px;
+    background-color: black;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+

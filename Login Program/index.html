@@ -3,15 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/chargingScreen.css">
     <link rel="stylesheet" href="Styles/loginStyle.css">
     <link rel="stylesheet" href="Styles/checkInStyle.css">
     <title>Document</title>
 </head>
-<body>
-    <!-- Este programa es una prueba de un ingreso a alguna plataforma (LOGIN) -->
+<body>  <!-- Este programa es una prueba de un ingreso a alguna plataforma (LOGIN) -->
 
-    <div class="loginInterfaceStyle" id="loginInterfaceLogic"><!-- Aquí va toda la parte del ingreso (LOGIN) -->
 
+    <!-- ↓ Pantalla de carga estructura -->
+     <div class="containerChargingScreenStyle" id="containerChargingScreenLogic" >
+        <p>Cargando</p>
+
+        <div class="chargingPointStyle" ></div>
+        <div class="chargingPointStyle" ></div>
+        <div class="chargingPointStyle" ></div>
+     </div>
+    <!-- ↑ Pantalla de carga estructura -->
+
+
+    <!-- ↓ Aquí va toda la parte del ingreso (LOGIN) -->
+    <div class="loginInterfaceStyle" id="loginInterfaceLogic">
         <!-- ↓ Estructura de los inputs ( Datos usuario ) -->
         <div>
             <p class="textLogin" >Numero de documento</p>
@@ -41,6 +53,7 @@
         <!-- ↑ Estructura de los botones ingresar y registrarsen -->
         
     </div>
+    <!-- ↑ Aquí va toda la parte del ingreso (LOGIN) -->    
 
     <!-- ↓ Estructura interfaz para registrarse -->
     <div class="checkInInterfaceStyle" id="checkInInterfaceLogic">
@@ -84,7 +97,9 @@
     </div>
     <!-- ↑ Estructura interfaz para registrarse -->
 
-    <div class="allStyle" id="allLogic" ><!-- Aquí va todo el contenido de la pagina -->
+
+    <!-- ↓ Contenido de la pagina -->
+    <div class="allStyle" id="allLogic" >
 
         <header></header>
 
@@ -93,6 +108,7 @@
         <footer></footer>
 
     </div>
+    <!-- ↑ Contenido de la pagina -->
 
     <script type="module" src="Logic/centerLogic.mjs" ></script> <!-- Logica de interacción -->
     <script type="module" src="Logic/centerNode.mjs" ></script> <!-- Logica de node ( servidor ) -->

@@ -77,6 +77,7 @@ export function enterCheckIn(){
 
         /* ↓ Manejo de errores de los inputs de contraseñas */
         let iteradorTwoCharactersErrors = oneNumberAndOneLetter(newPasswordCheckIn)
+        let save = 0
 
         console.log(iteradorTwoCharactersErrors,newPasswordCheckIn.value.length)
 
@@ -110,9 +111,16 @@ export function enterCheckIn(){
                 errorNewPassword.style.display = 'none'
                 errorCharactersPassword.style.display = 'none'
                 errorOneLetterAndNumber.style.display = 'none'
-                errorPasswordRepeat.style.display = 'none'
-                console.log('Registro exitoso')
+                errorPasswordRepeat.style.display = 'none'                
+                save = 1
+                console.log('Registro exitoso',' save =',save)
             }
+        }
+
+        if(save === 1){
+            documentCheckIn.value = ''
+            newPasswordCheckIn.value = ''
+            repeatPasswordCheckIn.value = ''
         }
         /* ↑ Manejo de errores de los inputs de contraseñas */
 
